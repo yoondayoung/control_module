@@ -61,10 +61,12 @@ void GPIO_Initialize ( void )
     /* PORTA Initialization */
     /* PORTB Initialization */
     LATB = 0x0; /* Initial Latch Value */
-    TRISBCLR = 0x3000; /* Direction Control */
-    ANSELBCLR = 0x7000; /* Digital Mode Enable */
+    TRISBCLR = 0x3008; /* Direction Control */
+    ANSELBCLR = 0x7008; /* Digital Mode Enable */
     /* PORTC Initialization */
     /* PORTD Initialization */
+    LATD = 0x0; /* Initial Latch Value */
+    TRISDCLR = 0x1; /* Direction Control */
     /* PORTE Initialization */
     /* PORTF Initialization */
     /* PORTG Initialization */
@@ -74,7 +76,11 @@ void GPIO_Initialize ( void )
     TRISHCLR = 0x7; /* Direction Control */
     ANSELHCLR = 0x3; /* Digital Mode Enable */
     /* PORTJ Initialization */
+    LATJ = 0x0; /* Initial Latch Value */
+    TRISJCLR = 0x2000; /* Direction Control */
     /* PORTK Initialization */
+    LATK = 0x0; /* Initial Latch Value */
+    TRISKCLR = 0x6; /* Direction Control */
 
     /* Unlock system for PPS configuration */
     SYSKEY = 0x00000000;

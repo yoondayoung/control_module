@@ -62,6 +62,24 @@
 // *****************************************************************************
 
 
+/*** Macros for PC_IGBT pin ***/
+#define PC_IGBT_Set()               (LATJSET = (1<<13))
+#define PC_IGBT_Clear()             (LATJCLR = (1<<13))
+#define PC_IGBT_Toggle()            (LATJINV= (1<<13))
+#define PC_IGBT_OutputEnable()      (TRISJCLR = (1<<13))
+#define PC_IGBT_InputEnable()       (TRISJSET = (1<<13))
+#define PC_IGBT_Get()               ((PORTJ >> 13) & 0x1)
+#define PC_IGBT_PIN                  GPIO_PIN_RJ13
+
+/*** Macros for MP_IGBT pin ***/
+#define MP_IGBT_Set()               (LATBSET = (1<<3))
+#define MP_IGBT_Clear()             (LATBCLR = (1<<3))
+#define MP_IGBT_Toggle()            (LATBINV= (1<<3))
+#define MP_IGBT_OutputEnable()      (TRISBCLR = (1<<3))
+#define MP_IGBT_InputEnable()       (TRISBSET = (1<<3))
+#define MP_IGBT_Get()               ((PORTB >> 3) & 0x1)
+#define MP_IGBT_PIN                  GPIO_PIN_RB3
+
 /*** Macros for GPIO_RH0 pin ***/
 #define GPIO_RH0_Set()               (LATHSET = (1<<0))
 #define GPIO_RH0_Clear()             (LATHCLR = (1<<0))
@@ -89,6 +107,24 @@
 #define GPIO_RH2_Get()               ((PORTH >> 2) & 0x1)
 #define GPIO_RH2_PIN                  GPIO_PIN_RH2
 
+/*** Macros for MN_Relay pin ***/
+#define MN_Relay_Set()               (LATKSET = (1<<1))
+#define MN_Relay_Clear()             (LATKCLR = (1<<1))
+#define MN_Relay_Toggle()            (LATKINV= (1<<1))
+#define MN_Relay_OutputEnable()      (TRISKCLR = (1<<1))
+#define MN_Relay_InputEnable()       (TRISKSET = (1<<1))
+#define MN_Relay_Get()               ((PORTK >> 1) & 0x1)
+#define MN_Relay_PIN                  GPIO_PIN_RK1
+
+/*** Macros for MP_Relay pin ***/
+#define MP_Relay_Set()               (LATKSET = (1<<2))
+#define MP_Relay_Clear()             (LATKCLR = (1<<2))
+#define MP_Relay_Toggle()            (LATKINV= (1<<2))
+#define MP_Relay_OutputEnable()      (TRISKCLR = (1<<2))
+#define MP_Relay_InputEnable()       (TRISKSET = (1<<2))
+#define MP_Relay_Get()               ((PORTK >> 2) & 0x1)
+#define MP_Relay_PIN                  GPIO_PIN_RK2
+
 /*** Macros for GPIO_RB12 pin ***/
 #define GPIO_RB12_Set()               (LATBSET = (1<<12))
 #define GPIO_RB12_Clear()             (LATBCLR = (1<<12))
@@ -106,6 +142,15 @@
 #define GPIO_RB13_InputEnable()       (TRISBSET = (1<<13))
 #define GPIO_RB13_Get()               ((PORTB >> 13) & 0x1)
 #define GPIO_RB13_PIN                  GPIO_PIN_RB13
+
+/*** Macros for MN_IGBT pin ***/
+#define MN_IGBT_Set()               (LATDSET = (1<<0))
+#define MN_IGBT_Clear()             (LATDCLR = (1<<0))
+#define MN_IGBT_Toggle()            (LATDINV= (1<<0))
+#define MN_IGBT_OutputEnable()      (TRISDCLR = (1<<0))
+#define MN_IGBT_InputEnable()       (TRISDSET = (1<<0))
+#define MN_IGBT_Get()               ((PORTD >> 0) & 0x1)
+#define MN_IGBT_PIN                  GPIO_PIN_RD0
 
 
 // *****************************************************************************
